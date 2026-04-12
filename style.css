@@ -818,35 +818,18 @@ a.project-card:hover {
 
 /* ---- Slogan ---- */
 /* ---- Chongqing Banner ---- */
-.banner-strip {
-  width: calc(100% + 56px);
-  margin-left: -28px;
-  height: 110px;
+.banner-full {
+  width: 100%;
+  height: 160px;
   overflow: hidden;
-  margin-bottom: 28px;
 }
 
-.banner-scroll {
-  display: flex;
-  height: 110px;
-  animation: bannerScroll 50s linear infinite;
-}
-
-.banner-scroll img {
-  height: 110px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
+.banner-full img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-
-@keyframes bannerScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.banner-strip:hover .banner-scroll {
-  animation-play-state: paused;
+  object-position: center 40%;
+  display: block;
 }
 
 .hero-tagline {
