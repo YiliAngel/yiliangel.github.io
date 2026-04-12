@@ -121,6 +121,21 @@ a:hover {
   cursor: pointer;
 }
 
+/* ---- Page Content ---- */
+.page-content {
+  padding-top: calc(var(--nav-height) + 48px);
+  padding-bottom: 60px;
+  min-height: calc(100vh - 100px);
+}
+
+.page-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  color: var(--color-text);
+}
+
 /* ---- Section Base ---- */
 .section {
   padding: 80px 0 60px;
@@ -132,6 +147,72 @@ a:hover {
 
 .section-alt {
   background: var(--color-bg-alt);
+}
+
+/* ---- Active Nav ---- */
+.nav-links a.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ---- Section Header with View All ---- */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.section-header h2 {
+  margin-bottom: 24px;
+}
+
+.view-all {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---- Featured Projects ---- */
+.featured-projects {
+  margin-top: 48px;
+}
+
+/* ---- Project Card as Link ---- */
+a.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a.project-card:hover {
+  text-decoration: none;
+}
+
+a.project-card:hover h3 {
+  color: var(--color-accent);
+}
+
+/* ---- Skills Grid ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skill-group h4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+
+.skill-group p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 
 h2 {
@@ -537,6 +618,10 @@ h3 {
 
   .cv-date {
     margin-bottom: -8px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .nav-links {
