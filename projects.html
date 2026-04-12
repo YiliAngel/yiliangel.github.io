@@ -21,9 +21,7 @@
       <a href="projects.html" class="active">Projects</a>
       <a href="cv.html">CV</a>
     </div>
-    <button class="nav-toggle" aria-label="Toggle menu">
-      <i class="fas fa-bars"></i>
-    </button>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
 
@@ -31,67 +29,104 @@
   <div class="container">
     <h1 class="page-title">Projects</h1>
 
+    <!-- ===== Research Projects ===== -->
+    <h2 class="projects-section-title">Research Projects</h2>
+
+    <!-- Exoskeleton -->
+    <a href="projects/exoskeleton.html" class="research-card">
+      <div class="research-card-img">
+        <div class="project-image-placeholder" style="height:100%"></div>
+      </div>
+      <div class="research-card-info">
+        <div class="project-tags">
+          <span class="project-tag">Ongoing</span>
+          <span class="project-tag">Hardware</span>
+          <span class="project-tag">Wearable</span>
+        </div>
+        <h3>From Intention to Action: A Brain-Controlled Exoskeleton Pipeline for Relearning Functional Hand Skills</h3>
+        <p class="research-card-authors"><strong>Yili Wen</strong>, Liang He</p>
+        <p class="research-card-desc">Developing a brain signal simulator and hand exoskeleton for SCI patients, bridging high-fidelity neural decoding with adaptive wearable assistance.</p>
+      </div>
+    </a>
+
+    <!-- PufFab -->
+    <a href="projects/puffab.html" class="research-card">
+      <div class="research-card-img">
+        <div class="project-image-placeholder" style="height:100%"></div>
+      </div>
+      <div class="research-card-info">
+        <div class="project-tags">
+          <span class="project-tag">TEI '26</span>
+          <span class="project-tag">Food HCI</span>
+          <span class="project-tag">Fabrication</span>
+        </div>
+        <h3>PufFab: Making Shape Transformable Rice Paper for Playful Food Fabrication</h3>
+        <p class="research-card-authors"><strong>Yili Wen</strong>, Yafei Ge, Xin Tong, Liang He</p>
+        <p class="research-card-venue">TEI '26 &middot; Poster</p>
+        <div class="research-card-links">
+          <span class="pub-link" onclick="event.preventDefault(); window.open('https://doi.org/10.1145/3731459.3779326','_blank')"><i class="fas fa-link"></i> DOI</span>
+          <span class="pub-link" onclick="event.preventDefault(); window.open('https://youtu.be/TN2AcWs8row','_blank')"><i class="fas fa-play"></i> Video</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Co-Writing -->
+    <a href="projects/cowriting.html" class="research-card">
+      <div class="research-card-img">
+        <div class="project-image-placeholder" style="height:100%"></div>
+      </div>
+      <div class="research-card-info">
+        <div class="project-tags">
+          <span class="project-tag">In Submission</span>
+          <span class="project-tag">AI + Writing</span>
+        </div>
+        <h3>Human-AI Co-Writing in Knowledge-Intensive Tasks: Behaviors, Challenges, and Collaboration Patterns</h3>
+        <p class="research-card-authors">Authors withheld for review</p>
+        <p class="research-card-desc">A within-subject user study with 23 participants evaluating LLM-human collaboration patterns in knowledge work.</p>
+      </div>
+    </a>
+
+    <!-- WooGu -->
+    <a href="projects/woogu.html" class="research-card">
+      <div class="research-card-img">
+        <img src="img/projects/woogu-cover.png" alt="WooGu">
+      </div>
+      <div class="research-card-info">
+        <div class="project-tags">
+          <span class="project-tag">IDC '25</span>
+          <span class="project-tag">TUI</span>
+          <span class="project-tag">Children</span>
+        </div>
+        <h3>"I Want to Use Technology to Help Farmers in the Future": Enhancing Children's Understanding of Farming through TUI and Embodied Interaction</h3>
+        <p class="research-card-authors"><strong>Yili Wen</strong>, Jiaxin Wang, Hongni Ye, Liang He, Min Fan, Xin Tong</p>
+        <p class="research-card-venue">IDC '25 &middot; Full Paper</p>
+        <div class="research-card-links">
+          <span class="pub-link" onclick="event.preventDefault(); window.open('https://doi.org/10.1145/3713043.3728865','_blank')"><i class="fas fa-link"></i> DOI</span>
+          <span class="pub-link" onclick="event.preventDefault(); window.open('https://vimeo.com/1095487310','_blank')"><i class="fas fa-play"></i> Video</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Adaptive Controller -->
+    <a href="projects/controller.html" class="research-card">
+      <div class="research-card-img">
+        <img src="img/projects/controller-cover.png" alt="Adaptive Controller">
+      </div>
+      <div class="research-card-info">
+        <div class="project-tags">
+          <span class="project-tag">In Submission</span>
+          <span class="project-tag">Accessibility</span>
+        </div>
+        <h3>Comparing Narrative Inquiry Methods to Support the Design of Adaptive Gaming Controller Accessories for People with Upper Limb Motor Disabilities</h3>
+        <p class="research-card-authors">Authors withheld for review</p>
+        <p class="research-card-desc">DIY accessible game controllers emphasizing user participation, open-source tools, and narrative inquiry methods.</p>
+      </div>
+    </a>
+
+    <!-- ===== Design Projects ===== -->
+    <h2 class="projects-section-title" style="margin-top: 56px;">Design Projects</h2>
+
     <div class="project-grid">
-
-      <a href="projects/exoskeleton.html" class="project-card">
-        <div class="project-image-placeholder"></div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">Ongoing</span>
-            <span class="project-tag">Hardware</span>
-          </div>
-          <h3>Brain-Controlled Exoskeleton for Relearning Functional Hand Skills</h3>
-          <p>Developing a brain signal simulator and hand exoskeleton for SCI patients, bridging neural decoding with adaptive wearable assistance.</p>
-        </div>
-      </a>
-
-      <a href="projects/puffab.html" class="project-card">
-        <div class="project-image-placeholder"></div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">TEI '26</span>
-            <span class="project-tag">Food HCI</span>
-          </div>
-          <h3>PufFab: Shape Transformable Rice Paper for Playful Food Fabrication</h3>
-          <p>An interactive design-to-fabrication pipeline utilizing Vietnamese rice paper for customizable edible shape transformation.</p>
-        </div>
-      </a>
-
-      <a href="projects/cowriting.html" class="project-card">
-        <div class="project-image-placeholder"></div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">In Submission</span>
-            <span class="project-tag">AI + Writing</span>
-          </div>
-          <h3>Human-AI Co-Writing in Knowledge-Intensive Tasks</h3>
-          <p>A within-subject study evaluating LLM-human collaboration patterns in knowledge work.</p>
-        </div>
-      </a>
-
-      <a href="projects/woogu.html" class="project-card">
-        <img src="img/projects/woogu-cover.png" alt="WooGu" class="project-cover-img">
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">IDC '25</span>
-            <span class="project-tag">TUI</span>
-          </div>
-          <h3>WooGu: Enhancing Children's Understanding of Farming through TUI</h3>
-          <p>An educational system integrating tangible user interfaces and embodied interactions with 3D-printed farming tools.</p>
-        </div>
-      </a>
-
-      <a href="projects/controller.html" class="project-card">
-        <img src="img/projects/controller-cover.png" alt="Adaptive Controller" class="project-cover-img">
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">In Submission</span>
-            <span class="project-tag">Accessibility</span>
-          </div>
-          <h3>Adaptive Gaming Controller for People with Upper Limb Motor Disabilities</h3>
-          <p>DIY accessible game controllers emphasizing user participation and narrative inquiry methods.</p>
-        </div>
-      </a>
 
       <a href="projects/wordlink.html" class="project-card">
         <img src="img/projects/wordlink-cover.png" alt="WordLink Hub" class="project-cover-img">
@@ -101,7 +136,7 @@
             <span class="project-tag">Wearable</span>
           </div>
           <h3>WordLink Hub: Empowering Floating Children Through Interactive Learning</h3>
-          <p>An educational system combining a wearable vocabulary device and interactive library installation.</p>
+          <p>An educational system combining a wearable vocabulary device and interactive library installation for migrant children.</p>
         </div>
       </a>
 
@@ -113,7 +148,7 @@
             <span class="project-tag">ML</span>
           </div>
           <h3>SIGHMY: Transforming Office Sighs into Positive Energy</h3>
-          <p>A cactus-shaped smart device using ML audio processing (90.8% accuracy) to detect and respond to workplace sighs.</p>
+          <p>A cactus-shaped smart device using ML audio processing to detect and respond to workplace sighs.</p>
         </div>
       </a>
 
@@ -130,13 +165,12 @@
       </a>
 
     </div>
+
   </div>
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <p>&copy; 2026 Yili Wen. Built with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
-  </div>
+  <div class="container"><p>&copy; 2026 Yili Wen. Built with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p></div>
 </footer>
 
 <script>
