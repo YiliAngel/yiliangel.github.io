@@ -817,6 +817,37 @@ a.project-card:hover {
 }
 
 /* ---- Slogan ---- */
+/* ---- Chongqing Banner ---- */
+.banner-strip {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.banner-scroll {
+  display: flex;
+  width: max-content;
+  animation: bannerScroll 40s linear infinite;
+}
+
+.banner-scroll img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+@keyframes bannerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.banner-strip:hover .banner-scroll {
+  animation-play-state: paused;
+}
+
 .hero-tagline {
   text-align: center;
 }
