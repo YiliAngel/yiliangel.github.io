@@ -819,27 +819,25 @@ a.project-card:hover {
 /* ---- Slogan ---- */
 /* ---- Chongqing Banner ---- */
 .banner-strip {
-  width: 100%;
-  max-height: 120px;
+  width: calc(100% + 56px);
+  margin-left: -28px;
+  height: 110px;
   overflow: hidden;
-  border-radius: 6px;
   margin-bottom: 28px;
-  position: relative;
 }
 
 .banner-scroll {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  animation: bannerScroll 40s linear infinite;
+  height: 110px;
+  animation: bannerScroll 50s linear infinite;
 }
 
 .banner-scroll img {
-  height: 120px;
+  height: 110px;
   width: auto;
-  max-width: none;
   display: block;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 @keyframes bannerScroll {
