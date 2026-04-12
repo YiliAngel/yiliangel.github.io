@@ -837,7 +837,7 @@ a.project-card:hover {
 
 .slogan-header-img {
   height: auto;
-  width: min(75%, 420px);
+  width: min(90%, 840px);
   opacity: 0.9;
   filter: brightness(1.1);
   transition: opacity 0.4s, filter 0.4s, drop-shadow 0.4s;
@@ -857,7 +857,7 @@ a.project-card:hover {
 
 .slogan-img {
   height: auto;
-  width: min(65%, 360px);
+  width: min(85%, 720px);
   opacity: 0.7;
   filter: brightness(1.1);
   transition: opacity 0.4s, filter 0.4s;
