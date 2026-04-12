@@ -593,7 +593,7 @@ h3.pub-category {
 /* ---- Projects Grid ---- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -814,6 +814,38 @@ a.project-card:hover {
   font-size: 13.5px;
   color: var(--color-text-muted);
   line-height: 1.7;
+}
+
+/* ---- Slogan ---- */
+.slogan-header-img {
+  height: 22px;
+  width: auto;
+  opacity: 0.35;
+  filter: invert(1);
+  transition: opacity 0.4s;
+}
+
+.slogan-header-img:hover {
+  opacity: 0.6;
+}
+
+.slogan-footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.slogan-img {
+  height: 28px;
+  width: auto;
+  opacity: 0.25;
+  filter: invert(1);
+  transition: opacity 0.4s;
+}
+
+.slogan-img:hover {
+  opacity: 0.5;
 }
 
 /* ---- Footer ---- */
