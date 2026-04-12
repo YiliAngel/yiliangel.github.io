@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WooGu - Yili Wen</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-name">Yili Wen</a>
+    <div class="nav-links">
+      <a href="../index.html">About</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../cv.html">CV</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<main class="page-content">
+  <div class="container project-detail">
+    <h1 class="page-title">"I Want to Use Technology to Help Farmers in the Future": Enhancing Children's Understanding of Farming through TUI and Embodied Interaction</h1>
+
+    <img src="../img/projects/woogu-cover.png" alt="WooGu project" class="project-hero-img">
+
+    <div class="project-meta">
+      <div class="project-meta-item">
+        <div class="project-meta-label">Venue</div>
+        <div class="project-meta-value">IDC '25 (Full Paper)</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Duration</div>
+        <div class="project-meta-value">May 2023 – Sep 2024</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Role</div>
+        <div class="project-meta-value">First Author</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Advisors</div>
+        <div class="project-meta-value">Xin Tong, <a href="https://www.lianghe.me/" target="_blank">Liang He</a>, Min Fan</div>
+      </div>
+    </div>
+
+    <h2>Abstract</h2>
+    <p>WooGu is an educational system integrating digital devices, Tangible User Interfaces (TUIs), and embodied interactions to teach children about the full farming process. The system combines real-time digital feedback with hands-on physical activities using 3D-printed farming tools and a watchOS app.</p>
+
+    <h2>System Design</h2>
+    <p>The system bridges 3D-printed tools with integrated sensors (IMU — accelerometers and gyroscopes) to provide multi-modal feedback (visual, haptic, and digital), encouraging children's physical engagement with farming concepts. A Recurrent Neural Network handles real-time movement classification through the watchOS companion app.</p>
+
+    <!-- IMAGE NEEDED: system overview diagram, 3D-printed tools, watchOS app screenshots, children using the system -->
+
+    <h2>Key Findings</h2>
+    <ul>
+      <li>Sequence Card Sorting scores: rice pre-test 2.9 → post-test 3.9</li>
+      <li>Seed Status Matching accuracy: 67% → 89%</li>
+      <li>Knowledge Questionnaire scores: 1.53 → 5.73</li>
+      <li>High engagement and attitude shift toward appreciation of farming and agricultural technology</li>
+    </ul>
+
+    <h2>Publication</h2>
+    <p><strong>Yili Wen</strong>, Jiaxin Wang, Hongni Ye, Liang He, Min Fan, Xin Tong. "I Want to Use Technology to Help Farmers in the Future": Enhancing Children's Understanding of Farming through Tangible User Interfaces and Embodied Interaction. <em>In Proceedings of the 24th Annual ACM Interaction Design and Children Conference (IDC '25)</em>.</p>
+
+    <div class="project-nav">
+      <a href="cowriting.html">&larr; Prev: Human-AI Co-Writing</a>
+      <a href="controller.html">Next: Adaptive Controller &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2026 Yili Wen</p></div>
+</footer>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('active'));
+</script>
+</body>
+</html>

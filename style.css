@@ -490,6 +490,17 @@ h3.pub-category {
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
 }
 
+.project-cover-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-cover-img {
+  transform: scale(1.03);
+}
+
 .project-body {
   padding: 20px;
 }
@@ -685,6 +696,161 @@ a.project-card:hover {
 
 .footer a:hover {
   color: var(--color-accent);
+}
+
+/* ---- Project Detail Page ---- */
+.project-hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 36px;
+}
+
+.project-hero-placeholder {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  border-radius: 8px;
+  margin-bottom: 36px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: var(--color-bg-alt);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.project-meta-item {
+  flex: 1;
+  min-width: 140px;
+}
+
+.project-meta-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.project-meta-value {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.project-detail h2 {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-detail p {
+  font-size: 14.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.project-detail ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.project-detail ul li {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.project-detail ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+
+.project-detail .img-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.project-detail .img-row img,
+.project-detail .img-full {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.project-detail .img-full {
+  margin: 24px 0;
+}
+
+.project-detail .img-caption {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.project-detail .bibtex {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  overflow-x: auto;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  margin: 16px 0;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.project-nav a {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  transition: color 0.3s;
+}
+
+.project-nav a:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .project-meta {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .project-detail .img-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---- Page Fade-in Animation ---- */

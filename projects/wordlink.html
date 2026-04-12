@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordLink Hub - Yili Wen</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-name">Yili Wen</a>
+    <div class="nav-links">
+      <a href="../index.html">About</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../projects.html" class="active">Projects</a>
+      <a href="../cv.html">CV</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<main class="page-content">
+  <div class="container project-detail">
+    <h1 class="page-title">WordLink Hub: Empowering Floating Children Through Interactive Reading and Learning</h1>
+
+    <img src="../img/projects/wordlink-cover.png" alt="WordLink Hub" class="project-hero-img">
+
+    <div class="project-meta">
+      <div class="project-meta-item">
+        <div class="project-meta-label">Type</div>
+        <div class="project-meta-value">Design Project</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Duration</div>
+        <div class="project-meta-value">Apr – Nov 2024</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Role</div>
+        <div class="project-meta-value">Solo Designer &amp; Researcher</div>
+      </div>
+      <div class="project-meta-item">
+        <div class="project-meta-label">Partner</div>
+        <div class="project-meta-value">Weilan Library, Kunshan</div>
+      </div>
+    </div>
+
+    <h2>Overview</h2>
+    <p>WordLink Hub is an educational system designed for "floating children" — children of rural migrant workers in urban China who face barriers to stable schooling and quality education. The system was developed in collaboration with Weilan Library, a non-governmental organization in Kunshan.</p>
+
+    <h2>System Components</h2>
+    <ul>
+      <li><strong>WordBuddy</strong> — A wearable device with text scanning, display, and pronunciation functions for vocabulary building. Customizable as bracelet, handheld tool, or magnifying glass. Features a collectible monster character that evolves based on words learned; two devices can compete socially.</li>
+      <li><strong>StorySpot Corner</strong> — An interactive library installation using two screens to visualize learning progress, encourage word exploration, and sustain reading motivation.</li>
+    </ul>
+
+    <h2>Design Process</h2>
+    <p>The design followed the POEMS Framework analysis with 4 rounds of design iteration and semi-structured user research with children and librarians at Weilan Library.</p>
+
+    <!-- IMAGE NEEDED: WordBuddy wearable renders, StorySpot Corner installation, POEMS framework diagram, user research photos, iteration process -->
+
+    <div class="project-nav">
+      <a href="controller.html">&larr; Prev: Adaptive Controller</a>
+      <a href="sighmy.html">Next: SIGHMY &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container"><p>&copy; 2026 Yili Wen</p></div>
+</footer>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('active'));
+</script>
+</body>
+</html>
