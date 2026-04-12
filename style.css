@@ -479,17 +479,18 @@ h3.pub-category {
   padding: 24px;
   margin-bottom: 20px;
   border-radius: 10px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-light);
   background: var(--color-bg-card);
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .research-card:hover {
-  border-color: var(--color-border-light);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(200, 184, 154, 0.15);
+  transform: translateY(-3px);
   text-decoration: none;
 }
 
@@ -566,6 +567,19 @@ h3.pub-category {
   cursor: pointer;
 }
 
+.research-card-arrow {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: auto;
+  padding-top: 8px;
+  transition: color 0.3s;
+  letter-spacing: 0.3px;
+}
+
+.research-card:hover .research-card-arrow {
+  color: var(--color-accent);
+}
+
 @media (max-width: 768px) {
   .research-card {
     grid-template-columns: 1fr;
@@ -579,7 +593,7 @@ h3.pub-category {
 /* ---- Projects Grid ---- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -695,6 +709,10 @@ a.project-card:hover {
 /* ---- Featured Projects ---- */
 .featured-projects {
   margin-top: 12px;
+}
+
+.featured-projects .project-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* ---- CV Section ---- */
@@ -1004,7 +1022,7 @@ a.project-card:hover {
   }
 
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .pub-item {
