@@ -29,9 +29,9 @@
   <div class="container project-detail">
     <h1 class="page-title">Haptic Wearable for Blind &amp; Low-Vision Runners</h1>
 
-    <!-- IMAGE NEEDED (Yili to add): the belt/tiles on a runner, motor + pulley close-up, a field-test shot. -->
+    <!-- IMAGE NEEDED (Yili to add): the spine-exoskeleton device figure (front+back, labeled tiles/cameras), + a field-test shot. -->
     <div style="border:1px dashed var(--rule, #B8C2CC); border-radius:8px; padding:64px 28px; text-align:center; color:#8a94a0; margin:0 0 28px; font-size:0.95rem;">
-      Hero image coming soon &mdash; the wearable on a runner
+      Device figure coming soon &mdash; the spine exoskeleton, front &amp; back
     </div>
 
     <div class="project-meta">
@@ -54,14 +54,35 @@
     </div>
 
     <h2>Overview</h2>
-    <p>A body-worn haptic system that guides blind and low-vision runners through turns and hazards &mdash; without relying on audio, which competes with the ambient sound runners depend on. The goal is to let a runner feel where to go, directly on the body.</p>
+    <p>A body-worn haptic system that guides blind and low-vision runners through turns and hazards &mdash; without relying on audio, which competes with the ambient sound runners depend on. The goal is to let a runner <em>feel</em> where to go, directly on the body, and turn themselves.</p>
 
-    <h2>What I'm Building</h2>
+    <img src="../img/projects/pblv-tethered.png" alt="Today, blind and low-vision runners rely on tethered guidance from a sighted guide — safe and trusted, but it needs a human and is not independent." class="project-hero-img">
+    <p class="img-caption">Today's practice: tethered guidance from a sighted guide &mdash; safe and trusted, but it needs a human and isn't independent. PACER aims to give that guidance back to the runner.</p>
+
+    <h2>The Device</h2>
+    <p>The wearable is a lightweight <strong>spine exoskeleton</strong> &mdash; a single articulated column that runs down the back, held by shoulder straps and a waist belt &mdash; carrying a small set of distributed tactile tiles. Each tile pairs a <strong>rigid backing shell</strong> with a <strong>tensioned strap</strong> so the cue presses into the skin instead of pushing the belt away.</p>
     <ul>
-      <li>A belt of distributed skin-stretch actuators that deliver directional cues on the torso, paired with on-device computer vision and a companion iOS app.</li>
-      <li>A novel guidance mechanism I am studying: <strong>sequential (cranio-caudal)</strong> versus <strong>simultaneous</strong> cueing &mdash; whether pulling in a head-to-toe sequence communicates a turn more clearly than pulling all at once.</li>
-      <li>In-field evaluation with blind and low-vision runners, to test whether the cues actually work at running speed and in real environments.</li>
+      <li><strong>Tactile tiles</strong> at the back of the neck and along the spine, each a left/right pair. A central <strong>seesaw (rocker)</strong> presses one side into the back while the other lifts, and a <strong>lateral rack-and-pinion</strong> drags the pair sideways &mdash; together encoding <em>direction</em>, <em>turn side</em>, and <em>urgency</em>.</li>
+      <li><strong>Head cue = gentle passive assist</strong> (the head is light and naturally leads a turn); <strong>body cue = active</strong> (the device cues, the runner turns). It guides intent rather than forcing the torso.</li>
+      <li><strong>Closed-loop</strong> turn angle from an on-body IMU, so a cue can stop once the runner has turned to the target.</li>
+      <li>Controller, motor drivers, and battery sit in a soft <strong>rear-waist pouch</strong>; an iOS companion app carries what touch can't (pace, environment) by voice.</li>
     </ul>
+
+    <h2>Research Question</h2>
+    <p>The mechanism I am studying is <strong>sequential (cranio-caudal)</strong> versus <strong>simultaneous</strong> cueing &mdash; whether cueing the tiles in a head-to-pelvis sequence communicates a turn more clearly than cueing all at once. This is grounded in turning biomechanics, where healthy turning cascades head&rarr;trunk&rarr;pelvis. A pilot then tests whether runners can <strong>identify the intended turning angle</strong> from the cue alone.</p>
+
+    <img src="../img/projects/pblv-sequential.png" alt="Planned turn cues all tiles simultaneously; an emergency turn cues them sequentially top-to-bottom, a head-to-pelvis wave grounded in cranio-caudal turning biomechanics." class="project-hero-img">
+    <p class="img-caption">A planned turn cues the tiles <em>simultaneously</em>; an emergency turn cues them <em>sequentially</em>, top&rarr;bottom &mdash; a head-to-pelvis wave grounded in cranio-caudal turning biomechanics.</p>
+
+    <h2>Computer Vision</h2>
+    <ul>
+      <li><strong>Forward sensing</strong> via a phone camera running an on-device object detector (YOLO, four classes: <em>person, obstacle, ground-hazard, vehicle</em>), trained on our own greenway running footage and deployed to iPhone (CoreML) for real-time, offline alerts.</li>
+      <li><strong>Rear sensing</strong> via a Grove Vision AI edge module that flags people or vehicles approaching from behind &mdash; the highest-value hazard case for a runner.</li>
+      <li>A decision engine ranks detections by urgency and drives the haptic tiles (and voice) only when the situation changes, keeping cues sparse and legible.</li>
+    </ul>
+
+    <h2>Evaluation</h2>
+    <p>In-field evaluation with blind and low-vision runners, to test whether the cues actually work at running speed and in real environments.</p>
 
     <p><em>A manuscript on this work is in preparation.</em></p>
 
