@@ -29,10 +29,8 @@
   <div class="container project-detail">
     <h1 class="page-title">Haptic Wearable for Blind &amp; Low-Vision Runners</h1>
 
-    <!-- IMAGE NEEDED (Yili to add): the spine-exoskeleton device figure (front+back, labeled tiles/cameras), + a field-test shot. -->
-    <div style="border:1px dashed var(--rule, #B8C2CC); border-radius:8px; padding:64px 28px; text-align:center; color:#8a94a0; margin:0 0 28px; font-size:0.95rem;">
-      Device figure coming soon &mdash; the spine exoskeleton, front &amp; back
-    </div>
+    <img src="../img/projects/pblv-device.png" alt="PACER spine-exoskeleton wearable, back and front views: neck tiles and spine tiles down an articulated column, a rear-waist module with the rear camera, controller, battery and IMU, and a phone front camera on the waist belt." style="width:100%; height:auto; border-radius:8px; margin:0 0 36px;">
+    <p class="img-caption">The PACER wearable &mdash; an articulated spine exoskeleton carrying neck and spine tactile tiles, a rear-waist electronics module, and front/rear cameras.</p>
 
     <div class="project-meta">
       <div class="project-meta-item">
@@ -56,7 +54,7 @@
     <h2>Overview</h2>
     <p>A body-worn haptic system that guides blind and low-vision runners through turns and hazards &mdash; without relying on audio, which competes with the ambient sound runners depend on. The goal is to let a runner <em>feel</em> where to go, directly on the body, and turn themselves.</p>
 
-    <img src="../img/projects/pblv-tethered.png" alt="Today, blind and low-vision runners rely on tethered guidance from a sighted guide — safe and trusted, but it needs a human and is not independent." class="project-hero-img">
+    <img src="../img/projects/pblv-tethered.png" alt="Today, blind and low-vision runners rely on tethered guidance from a sighted guide — safe and trusted, but it needs a human and is not independent." style="width:100%; height:auto; border-radius:8px; margin-top:8px;">
     <p class="img-caption">Today's practice: tethered guidance from a sighted guide &mdash; safe and trusted, but it needs a human and isn't independent. PACER aims to give that guidance back to the runner.</p>
 
     <h2>The Device</h2>
@@ -71,14 +69,15 @@
     <h2>Research Question</h2>
     <p>The mechanism I am studying is <strong>sequential (cranio-caudal)</strong> versus <strong>simultaneous</strong> cueing &mdash; whether cueing the tiles in a head-to-pelvis sequence communicates a turn more clearly than cueing all at once. This is grounded in turning biomechanics, where healthy turning cascades head&rarr;trunk&rarr;pelvis. A pilot then tests whether runners can <strong>identify the intended turning angle</strong> from the cue alone.</p>
 
-    <img src="../img/projects/pblv-sequential.png" alt="Planned turn cues all tiles simultaneously; an emergency turn cues them sequentially top-to-bottom, a head-to-pelvis wave grounded in cranio-caudal turning biomechanics." class="project-hero-img">
+    <img src="../img/projects/pblv-sequential.png" alt="Planned turn cues all tiles simultaneously; an emergency turn cues them sequentially top-to-bottom, a head-to-pelvis wave grounded in cranio-caudal turning biomechanics." style="width:100%; height:auto; border-radius:8px; margin-top:8px;">
     <p class="img-caption">A planned turn cues the tiles <em>simultaneously</em>; an emergency turn cues them <em>sequentially</em>, top&rarr;bottom &mdash; a head-to-pelvis wave grounded in cranio-caudal turning biomechanics.</p>
 
-    <h2>Computer Vision</h2>
+    <h2>Sensing &amp; Computer Vision</h2>
     <ul>
-      <li><strong>Forward sensing</strong> via a phone camera running an on-device object detector (YOLO, four classes: <em>person, obstacle, ground-hazard, vehicle</em>), trained on our own greenway running footage and deployed to iPhone (CoreML) for real-time, offline alerts.</li>
-      <li><strong>Rear sensing</strong> via a Grove Vision AI edge module that flags people or vehicles approaching from behind &mdash; the highest-value hazard case for a runner.</li>
-      <li>A decision engine ranks detections by urgency and drives the haptic tiles (and voice) only when the situation changes, keeping cues sparse and legible.</li>
+      <li><strong>Forward sensing</strong> &mdash; a phone camera runs an on-device object detector (YOLO, four classes: <em>person, obstacle, ground-hazard, vehicle</em>) trained on our own greenway running footage and deployed to iPhone via CoreML for real-time, fully offline alerts.</li>
+      <li><strong>Close-range depth</strong> &mdash; a short-range depth sensor (LiDAR / time-of-flight) gauges how near and how urgent a hazard is, complementing the camera and filtering distant false alarms. Our characterization found it reliable to ~4&ndash;5&nbsp;m, so it serves as a close-range safety layer rather than the primary sensor.</li>
+      <li><strong>Rear sensing</strong> &mdash; a Grove Vision AI edge module flags people or vehicles approaching from behind, the highest-value hazard case for a runner.</li>
+      <li><strong>Decision engine</strong> &mdash; detections are ranked by urgency and drive the haptic tiles (and voice) only when the situation changes, keeping cues sparse and legible.</li>
     </ul>
 
     <h2>Evaluation</h2>
