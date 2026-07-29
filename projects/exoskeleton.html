@@ -38,7 +38,7 @@
       </div>
       <div class="project-meta-item">
         <div class="project-meta-label">Status</div>
-        <div class="project-meta-value">Ongoing</div>
+        <div class="project-meta-value">Ongoing (hardware prototyping)</div>
       </div>
       <div class="project-meta-item">
         <div class="project-meta-label">Duration</div>
@@ -51,16 +51,20 @@
     </div>
 
     <h2>Overview</h2>
-    <p>A wearable soft exoskeleton that restores grasping to people with spinal cord injury (SCI), driven by the wearer's own decoded intent. The aim is to help SCI patients regain functional hand skills for the activities of daily living &mdash; and, longer term, to close the loop from neural intention to physical assistance.</p>
+    <p>A spinal cord injury can leave someone unable to close their hand, which takes away the grasp behind most everyday tasks, from holding a cup to picking up a phone. This project builds a wearable that gives that grasp back. Rather than replacing the hand, it adds a soft robotic finger that works together with the wearer's own thumb to hold an object, and it is driven by the wearer's own decoded intent so the movement feels like theirs.</p>
 
-    <h2>What I'm Building</h2>
+    <h2>How It Works</h2>
     <ul>
-      <li>Soft pneumatic finger actuators (silicone-cast) and a layer-jamming wrist brace, for compliant, stable grasp assistance.</li>
-      <li>The embedded control and pressure-sensing stack that drives the wearable.</li>
-      <li>A neural-intent (BCI) pipeline that turns decoded intention into adaptive assistance.</li>
-      <li>A co-design study with clinicians, to ground the design in real rehabilitation needs.</li>
+      <li>A <strong>soft pneumatic finger</strong> with three air chambers, so it can bend in more than one direction and switch grasp shapes (for example a pad-to-pad pinch versus a side pinch) to meet the thumb across different object sizes.</li>
+      <li>A <strong>layer-jamming wrist brace</strong> that stiffens on demand to steady the wrist, which many people with SCI can't hold stable on their own, so the grasp has something firm to push against.</li>
+      <li>An <strong>ESP32 control and pressure-sensing stack</strong> that pumps, regulates, and holds each chamber at the right pressure in closed loop.</li>
+      <li>A <strong>neural-intent (BCI) pipeline</strong> that turns decoded intention into the grasp, closing the loop from what the wearer wants to do to the assistance they get.</li>
+      <li>A <strong>co-design study with clinicians</strong> that keeps the design grounded in real rehabilitation needs.</li>
     </ul>
-    <p>An early-stage workshop paper on this work &mdash; <em>&ldquo;From Intention to Action&rdquo;</em> &mdash; was presented at the Everyday Wearables for Health workshop, CHI&nbsp;'26.</p>
+
+    <h2>Progress</h2>
+    <p>The pneumatic control bench is working, with closed-loop pressure driving the chambers, and the first soft fingers have been printed in silicone. Printing a finger in two halves gives the right shape, but the glued seam doesn't seal the internal chambers, so the next step is to print each finger as a single piece. After that comes two-finger opposition and integration onto a lightweight forearm sleeve.</p>
+    <p>An early-stage workshop paper on this work, <em>&ldquo;From Intention to Action,&rdquo;</em> was presented at the Everyday Wearables for Health workshop at CHI&nbsp;2026.</p>
 
     <!-- IMAGE NEEDED (Yili to add): finger actuator close-ups, the wrist brace, the wearable on a hand. -->
     <div style="border:1px dashed var(--rule, #B8C2CC); border-radius:8px; padding:28px; text-align:center; color:#8a94a0; margin:24px 0; font-size:0.9rem;">
