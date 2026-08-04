@@ -29,8 +29,8 @@
   <div class="container project-detail">
     <h1 class="page-title">Wearable Actuation System for Blind &amp; Low-Vision Runners</h1>
 
-    <img src="../img/projects/pblv-device.png" alt="PACER spine-exoskeleton wearable, back and front views: neck tiles and spine tiles down an articulated column, a rear-waist module with the rear camera, controller, battery and IMU, and a phone front camera on the waist belt." style="width:100%; height:auto; border-radius:8px; margin:0 0 36px;">
-    <p class="img-caption">The PACER wearable, an articulated spine exoskeleton carrying neck and spine tactile tiles, a rear-waist electronics module, and front and rear cameras.</p>
+    <img src="../img/projects/pblv-device-annotated.png" alt="PACER worn by a running figure on a lightweight torso vest, with each part labelled and its trade-off listed. Single chest module: flat low-motion mounting area, rigid core only around the motors, soft conforming shell, but the reaction must route into the vest straps. Routed conduit: the cord slides inside with no skin contact and a fixed path, but every bend costs force. Pulley block on the upper-arm cuff: three times the force from a small motor and the user can still pull the cord freely, but travel and speed are divided by three. Front-waist module: phone, controller, battery and IMU in one, mass centred and low." style="width:100%; height:auto; border-radius:8px; margin:0 0 36px;">
+    <p class="img-caption">PACER worn for a run. A chest module drives a cord out to a cuff on each upper arm, so the wearable can pull an arm the way a guide's rope does. Each label lists what that part buys and what it costs.</p>
 
     <div class="project-meta">
       <div class="project-meta-item">
@@ -67,21 +67,25 @@
     <h2>Problem Statement</h2>
     <p>A sighted runner stays safe and on-course through a private channel, their own eyes, ears, and watch. A BLV runner has no access to it, so today a second person re-expresses that channel through a rope and their voice. The problem is to <strong>reproduce that guidance on the runner's own body, the rope's directional pull and the guide's speech, so a blind runner can run safely and independently, at speed.</strong></p>
 
+    <!-- 2026-08-04: this section was rewritten. It previously described a spine-exoskeleton
+         with seesaw press tiles down the back, plus a simultaneous-vs-sequential section.
+         That design was dropped. Current direction is cable pull on the arms, which is what
+         a guide rope already does. Anchor placement and actuator architecture are still
+         being settled, so this is written at the level that is actually decided. -->
     <h2>The Device</h2>
-    <p>PACER is a lightweight <strong>spine exoskeleton</strong> worn like a vest. A segmented column runs down the center of the back, held by shoulder straps and a waist belt, and it carries a small set of <strong>motorized tactile tiles</strong> that actuate against the body with real mechanical force rather than vibration. The wearable has four parts.</p>
+    <p>PACER keeps the guide rope and removes the guide. Instead of a second person holding the other end, the wearable anchors the cord on the runner's own body and pulls. The cue is the one the runners already read every run, so there is no new code to learn. It sits on a lightweight torso vest and has four parts.</p>
     <ul>
-      <li><strong>Neck tiles</strong>, a left / right pair at the top of the spine column, that gently nudge the head to lead a turn.</li>
-      <li><strong>Three paired spine tiles</strong> down the column. Each tile is driven by two motors, a <strong>seesaw press</strong> that pushes one side into the back (turn side and urgency) and a <strong>lateral drag</strong> that pulls the pair sideways (direction). A rigid backing shell and a tensioned strap send the force into the body instead of lifting the belt away.</li>
-      <li>A soft <strong>rear-waist module</strong> holding the controller, motor drivers, battery, and an <strong>IMU</strong> that reads turn angle in closed loop, so an actuation can stop once the runner has turned far enough.</li>
-      <li>A <strong>phone</strong> at the front for forward sensing and the voice channel (pace, environment), which carries what touch can't.</li>
+      <li><strong>Chest module.</strong> Both motors live in one flat housing on the chest, a mounting area that stays relatively still while running. Only the core around the motors is rigid, since that is what has to carry the reaction torque, and the rest of the shell conforms softly. The reaction force is routed out into the vest straps and spread across the back rather than pressed into one small patch of chest.</li>
+      <li><strong>Routed conduit.</strong> The cord runs inside a conduit along the vest, so it never drags on skin and its path is fixed no matter how the runner moves. The cost is that every bend in the route eats some of the force.</li>
+      <li><strong>Pulley block at the arm.</strong> A small block on each upper-arm cuff triples the force a small motor can deliver, and it keeps the cord free enough that the runner's own arm swing is never fought. The trade is that travel and speed are divided by the same factor.</li>
+      <li><strong>Front-waist module.</strong> Phone, controller, battery, and IMU in one unit on the belt, which keeps the mass centred and low and puts the forward camera and the voice channel where they need to be.</li>
     </ul>
-    <p><strong>Why the back.</strong> A turn is a whole-body motion that cascades from head to trunk to pelvis (cranio-caudal turning biomechanics), and the spine is the axis it turns about. Actuating down the spine puts the directional force on the very structure that carries out a turn, and it lets a single top-to-bottom sequence mirror how a real turn unfolds.</p>
-    <p><strong>Real actuation, not a vibration cue.</strong> The interviews ruled out vibration, so every signal is real mechanical work. The seesaw press and lateral drag together reproduce the guide-rope's directional pull, the spatial &ldquo;pull-this-way&rdquo; the runners already trust. This is what makes it an actuation system and not a haptic display. It presses and pulls on the body with real force, not a buzz to decode.</p>
-    <p><strong>It steers the turn, it doesn't force it.</strong> The actuation is directional, not a full-body rotation. Spinning a running torso would need heavy actuators and a rigid frame, which is unsafe on a runner, so PACER applies enough force to steer the runner's own turn, the way a guide's rope does. The runner stays in control and completes the turn.</p>
-    <p><strong>Simultaneous vs. sequential.</strong> For a planned turn, the tiles actuate <em>together</em>. For a sudden, emergency turn, they actuate <em>sequentially</em>, top to bottom, a head-to-pelvis wave that mirrors how a healthy body turns. Whether that sequence reads more clearly and urgently than a single simultaneous actuation, and whether runners can identify the intended turn <em>angle</em> from it, is the core open question of this work.</p>
+    <p><strong>Why the arms.</strong> The rope already acts on the arm, so the arm is where these runners have years of practice reading tension. Anchoring on the chest also gives the cord real leverage about the shoulder, which a strap over the top of the shoulder does not, and the pull lands with the arm rather than against it.</p>
 
-    <img src="../img/projects/pblv-sequential.png" alt="Planned turn actuates all tiles simultaneously; an emergency turn actuates them sequentially top-to-bottom, a head-to-pelvis wave grounded in cranio-caudal turning biomechanics." style="width:100%; height:auto; border-radius:8px; margin-top:8px;">
-    <p class="img-caption">A planned turn actuates the tiles <em>simultaneously</em>. An emergency turn actuates them <em>sequentially</em>, top to bottom, a head-to-pelvis wave grounded in cranio-caudal turning biomechanics.</p>
+    <img src="../img/projects/pblv-device-annotated.png" alt="Annotated PACER design with the trade-off for each part. Single chest module: flat low-motion mounting area, rigid core only around the motors, soft conforming shell, but the reaction must route into the vest straps. Routed conduit: the cord slides inside with no skin contact and a fixed path, but every bend costs force. Pulley block: three times the force from a small motor and the user can still pull the cord freely, but travel and speed are divided by three. Front-waist module: phone, controller, battery and IMU in one, mass centred and low." style="width:100%; height:auto; border-radius:8px; margin-top:8px;">
+    <p class="img-caption">What each part buys and what it costs. The chest module trades a small rigid core for a stable mount, the conduit trades some force at every bend for a fixed cord path, and the pulley block trades travel and speed for three times the pull.</p>
+    <p><strong>It steers the turn, it does not force it.</strong> The pull is a direction, not a rotation. Turning a running body outright would need heavy actuators and a rigid frame against the ground, which is not safe on a runner, so PACER applies about what a guide's rope applies and the runner completes the turn. The runner stays in control.</p>
+    <p><strong>The open question is timing.</strong> Running is periodic, and the arm is in a different place every fraction of a second, so a pull means different things depending on when in the swing it arrives. Pulling at the end of the back-swing works with the arm's own reversal, while pulling mid-swing fights it. Detecting swing phase from the line itself, and choosing which phase carries a cue most clearly without disturbing gait, is the core research question of this work.</p>
 
     <h2>Sensing &amp; Computer Vision</h2>
     <p>The survey also told the sensing stack what to look for first. Runners rated ground-plane hazards (potholes, uneven ground, drop-offs) and vehicles the most dangerous, so those are prioritized.</p>
@@ -89,15 +93,15 @@
       <li><strong>Forward sensing.</strong> A phone camera runs an on-device object detector (YOLO, four classes, being <em>person, obstacle, ground-hazard, vehicle</em>) trained on our own greenway running footage and deployed to iPhone via CoreML for real-time, fully offline alerts.</li>
       <li><strong>Close-range depth.</strong> A short-range depth sensor (LiDAR / time-of-flight) gauges how near and how urgent a hazard is, complementing the camera and filtering distant false alarms. Our characterization found it reliable to about 4&ndash;5&nbsp;m, so it serves as a close-range safety layer rather than the primary sensor.</li>
       <li><strong>Rear sensing.</strong> A Grove Vision AI edge module flags people or vehicles approaching from behind, the highest-value hazard case for a runner.</li>
-      <li><strong>Decision engine.</strong> Detections are ranked by urgency and drive the haptic tiles (and voice) only when the situation changes, keeping cues sparse and legible.</li>
+      <li><strong>Decision engine.</strong> Detections are ranked by urgency and drive the cable cues (and voice) only when the situation changes, keeping cues sparse and legible.</li>
     </ul>
 
     <h2>Evaluation Plan</h2>
-    <p>The study builds up in three stages.</p>
+    <p>The first two studies are done. The rest builds up in three stages.</p>
     <ul>
-      <li><strong>Bench characterization.</strong> Measure each tile's press and drag force and salience against a rigid backing, and validate the forward, downward, and rear sensing stack against the perception requirements the survey prioritized (ground-plane hazards and vehicles first).</li>
-      <li><strong>Angle-identification pilot.</strong> Stationary or slow-walk. Can a runner read the intended turn side and angle from the cue alone, and does the <em>sequential</em> cue beat the <em>simultaneous</em> one on accuracy and reaction time?</li>
-      <li><strong>In-field study with BLV runners.</strong> With the Dark Runners community. Can on-body guidance hold a course and cue real turns and hazards at running speed, compared against the guide-rope baseline, measuring safety, response, workload, and trust?</li>
+      <li><strong>Bench characterization.</strong> Measure the pull force at the cuff, the cord speed, the loss through each conduit bend, and how freely the cord runs out through a full arm swing, then validate the forward, downward, and rear sensing stack against the perception requirements the survey prioritized (ground-plane hazards and vehicles first).</li>
+      <li><strong>Timing pilot.</strong> Stationary or slow-walk. Can a runner read the intended turn side and angle from the pull alone, and which phase of the arm swing carries a cue most clearly without disturbing gait?</li>
+      <li><strong>In-field study with BLV runners.</strong> With the Dark Runners community. <strong>9 to 12 blind and low-vision runners</strong>, each running <strong>3&nbsp;km</strong> in <strong>two settings</strong>, a rubber running track and a park, comparing on-body guidance against the guide-rope baseline on safety, response, workload, and trust.</li>
     </ul>
 
     <p><em>A manuscript on this work is in preparation.</em></p>
